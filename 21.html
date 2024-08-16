@@ -1,1 +1,40 @@
-<a href="salvar_arquivo.php">Salvar arquivo</a>
+<html>
+  <head>
+    <style>
+      .chat {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .mensagem {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .mensagem.esquerda {
+        text-align: left;
+        background-color: #f0f0f0;
+      }
+      .mensagem.direita {
+        text-align: right;
+        background-color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat">
+      <script>
+        const lista = getLista();
+        lista.forEach((item) => {
+          const mensagem = document.createElement("div");
+          mensagem.className = `mensagem ${item.lado}`;
+          mensagem.textContent = item.texto;
+          document.querySelector(".chat").appendChild(mensagem);
+        });
+      </script>
+    </div>
+  </body>
+</html>
