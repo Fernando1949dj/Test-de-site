@@ -6,6 +6,7 @@
     body {
       margin: 0;
       overflow-x: hidden; /* Desabilita a barra de rolagem horizontal */
+      background-color: #6C9FC8; /* Adiciona cor de fundo ao body */
     }
 
     .header {
@@ -18,9 +19,17 @@
       z-index: 10; /* Garante que a barra fixa fique acima do conteúdo */
     }
 
+    .header h1 {
+      font-size: 2.3vw; /* Ajusta o tamanho do título da página */
+    }
+
     .content {
       padding-top: 50px; /* Adiciona espaço para a barra fixa */
       height: 100vh; /* Define a altura da página para ocupar toda a tela */
+    }
+
+    .content h2, .content p {
+      font-size: 1.8vw; /* Ajusta o tamanho dos títulos e parágrafos da página */
     }
   </style>
 </head>
@@ -40,7 +49,4 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
-  </div>
-</body>
-</html>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
