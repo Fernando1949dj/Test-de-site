@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exibir parâmetro de URL</title>
+</head>
+<body>
+  <h1>Parâmetro de URL:</h1>
+  <p id="parametro"></p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const parametro = urlParams.get('chat');
+
+    document.getElementById('parametro').innerHTML = parametro;
+  </script>
+</body>
+</html>
