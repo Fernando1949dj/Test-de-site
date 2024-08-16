@@ -5,6 +5,7 @@
   </head>
   <body>
     <button onclick="requestPermission()">Request Permission</button>
+    <div id="error-message"></div>
     <script>
       function requestPermission() {
         // Check if the browser supports the File System API
@@ -20,19 +21,19 @@
                   // Write the content to the file
                   fileWriter.write('test 2024');
                 }, function(error) {
-                  console.log('Error writing file: ' + error);
+                  document.getElementById('error-message').innerHTML = 'Error writing file: ' + error;
                 });
               }, function(error) {
-                console.log('Error creating file: ' + error);
+                document.getElementById('error-message').innerHTML = 'Error creating file: ' + error;
               });
             }, function(error) {
-              console.log('Error creating folder: ' + error);
+              document.getElementById('error-message').innerHTML = 'Error creating folder: ' + error;
             });
           }, function(error) {
-            console.log('Error requesting file system: ' + error);
+            document.getElementById('error-message').innerHTML = 'Error requesting file system: ' + error;
           });
         } else {
-          console.log('Your browser does not support the File System API');
+          document.getElementById('error-message').innerHTML = 'Your browser does not support the File System API';
         }
       }
     </script>
