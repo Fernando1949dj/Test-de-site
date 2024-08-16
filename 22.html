@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <title>Chat</title>
     <style>
       .chat {
         width: 80%;
@@ -9,15 +11,18 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
+
       .mensagem {
         margin-bottom: 20px;
         padding: 10px;
         border-bottom: 1px solid #ccc;
       }
+
       .mensagem.esquerda {
         text-align: left;
         background-color: #f0f0f0;
       }
+
       .mensagem.direita {
         text-align: right;
         background-color: #e0e0e0;
@@ -27,6 +32,16 @@
   <body>
     <div class="chat">
       <script>
+        function getLista() {
+          return [
+            { texto: "Olá, como você está?", lado: "esquerda" },
+            { texto: "Estou bem, obrigado!", lado: "direita" },
+            { texto: "Que bom!", lado: "esquerda" },
+            { texto: "Sim, estou feliz!", lado: "direita" },
+            { texto: "Isso é ótimo!", lado: "esquerda" },
+          ];
+        }
+
         const lista = getLista();
         lista.forEach((item) => {
           const mensagem = document.createElement("div");
