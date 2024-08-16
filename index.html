@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pagina Inicial</title>
-<style>
-body {
-  background-color: #6C9FC8; /* Cor verde claro */
-  margin: 0; /* Remove margens padrão */
-  padding: 0; /* Remove preenchimento padrão */
-}
+  <title>Página Inicial</title>
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden; /* Desabilita a barra de rolagem horizontal */
+    }
 
-h1 {
-  text-align: center;
-  color: black;
-  margin-top: 100px; /* Ajuste o espaçamento superior */
-  font-size: 50px; /* Ajuste o tamanho da fonte */
-  font-weight: bold;
-}
-</style>
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #6C9FC8;
+      padding: 10px 0;
+      z-index: 10; /* Garante que a barra fixa fique acima do conteúdo */
+    }
+
+    .content {
+      padding-top: 50px; /* Adiciona espaço para a barra fixa */
+      height: 100vh; /* Define a altura da página para ocupar toda a tela */
+    }
+  </style>
 </head>
 <body>
-<h1>Pagina Inicial</h1>
+  <div class="header">
+    <h1>Página Inicial</h1>
+  </div>
+
+  <div class="content">
+    <h2>test de página rolável</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+  </div>
 </body>
 </html>
