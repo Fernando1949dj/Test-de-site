@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Request Storage Permission</title>
+  </head>
+  <body>
+    <button onclick="requestPermission()">Request Permission</button>
+    <script>
+      function requestPermission() {
+        // Check if the browser supports the File System API
+        if (window.requestFileSystem) {
+          // Request permission to access the file system
+          window.requestFileSystem(window.PERSISTENT, 1024*1024, function(fs) {
+            // Create a folder named 'Chat' if it doesn't exist
+            fs.root.getDirectory('Chat', {create: true}, function(dirEntry) {
+              // Create a file named 'test.txt' inside the 'Chat' folder
+              dirEntry.getFile('test.txt', {create: true}, function(fileEntry) {
+                // Create a file writer
+                fileEntry.createWriter(function(fileWriter) {
+                  // Write the content to the file
+                  fileWriter.write('test 2024');
+                }, function(error) {
+                  console.log('Error writing file: ' + error);
+                });
+              }, function(error) {
+                console.log('Error creating file: ' + error);
+              });
+            }, function(error) {
+              console.log('Error creating folder: ' + error);
+            });
+          }, function(error) {
+            console.log('Error requesting file system: ' + error);
+          });
+        } else {
+          console.log('Your browser does not support the File System API');
+        }
+      }
+    </script>
+  </body>
+</html>
